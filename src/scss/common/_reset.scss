@@ -34,10 +34,14 @@ ul {
 a {
   color: currentColor;
   text-decoration: none;
+  font-family: inherit;
 }
 
 button {
   cursor: pointer;
+  border: none;
+  font-family: inherit;
+  color: inherit;
 }
 
 img {

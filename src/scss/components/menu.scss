@@ -1,9 +1,10 @@
 .context-menu {
   display: none;
-  background-color: $_secondary_bg_color;
-  padding: 49px 60px 66px 60px;
-  border-radius: 0 0 26px 26px;
+  background-color: $_main_bg_color;
+  padding: 32px 0px 32px 60px;
   border-bottom: 2px solid #22003b;
+  border-top: 2px solid #22003b;
+  border-radius: 0 0 26px 26px;
   max-width: 375px;
   width: 100%;
   margin-right: auto;
@@ -23,11 +24,17 @@
 }
 
 .context-list-link {
-  font-family: 'Fredoka One', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 18px;
-  color: $_white_text_color;
+  color: #180f29;
   transition: color 0.3s ease-in-out;
+}
+
+.context-link-home {
+  border-radius: 100px;
+  padding: 12px 16px;
+  color: #fff9ff;
+  background-color: #900909;
 }
 
 .is-open {

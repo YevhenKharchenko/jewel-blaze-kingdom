@@ -1,7 +1,11 @@
 .policy-section {
   background-color: $_white_text_color;
   padding-top: 80px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
+
+  @include media(desktop) {
+    padding-top: 60px;
+  }
 }
 
 .policy-container {
@@ -15,20 +19,18 @@
 }
 
 .policy-title {
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.3;
-  color: $_black_text_color;
+  color: $_main_color;
   margin-bottom: 30px;
 }
 
 .policy-text {
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.3;
-  color: $_black_text_color;
+  color: $_main_color;
 
   &:not(:last-child) {
     margin-bottom: 30px;

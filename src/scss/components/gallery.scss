@@ -1,7 +1,7 @@
 .gallery-section {
   padding-top: 28px;
   padding-bottom: 34px;
-  background-color: $_secondary_bg-color;
+  background-color: $_main_bg-color;
   scroll-margin-top: 50px;
 
   @include media(desktop) {

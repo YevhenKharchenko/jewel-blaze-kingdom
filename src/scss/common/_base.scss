@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Rubik', sans-serif;
   color: $_main_color;
   background: $_main_bg_color;
 
@@ -44,7 +44,11 @@ html {
 
 .section-title {
   font-weight: 900;
-  font-size: 34px;
+  font-size: 18px;
   text-transform: uppercase;
   text-align: center;
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
 }
