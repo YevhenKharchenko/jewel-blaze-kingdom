@@ -1,0 +1,111 @@
+.reviews-section {
+  padding-top: 28px;
+  padding-bottom: 98px;
+  background-image: url(../img/reviews/reviews-bg-mob.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  scroll-margin-top: 50px;
+  position: relative;
+
+  @include media(desktop) {
+    background-image: url(../img/reviews/reviews-bg-desk.jpg);
+    padding-bottom: 160px;
+  }
+}
+
+.reviews-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #ffd797;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.reviews-title {
+  margin-bottom: 20px;
+
+  @include media(desktop) {
+    margin-bottom: 61px;
+  }
+}
+
+.reviews-swiper-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 335px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(desktop) {
+    max-width: 740px;
+  }
+}
+
+.reviews-list-item {
+  @include media(desktop) {
+    max-width: 740px;
+  }
+}
+
+.reviews-list-item-wrapper {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.reviews-avatar {
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 1000px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.reviews-text-wrapper {
+  padding: 16px 36px;
+  background-color: $_white_text_color;
+  border-radius: 26px;
+  border: 1px solid #fff;
+
+  @include media(desktop) {
+    padding: 23px 36px;
+  }
+}
+
+.reviews-name {
+  font-family: 'Fredoka One', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.reviews-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+}
+
+.reviews-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 22px;
+
+  @include media(desktop) {
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 824px;
+  }
+}

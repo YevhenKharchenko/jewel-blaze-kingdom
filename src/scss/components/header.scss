@@ -1,0 +1,77 @@
+.header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #6d27ef;
+  z-index: 10;
+
+  @include media(desktop) {
+    padding-top: 19.5px;
+    padding-bottom: 18.5px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  @include media(desktop) {
+    justify-content: center;
+  }
+}
+
+.nav-list {
+  display: none;
+
+  @include media(desktop) {
+    display: flex;
+    gap: 88px;
+  }
+}
+
+.nav-list-link {
+  font-family: 'Fredoka One', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: $_white_text_color;
+  transition: color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $_secondary_bg_color;
+  }
+}
+
+.link-home {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav-btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 28px;
+  height: 28px;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.close-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 28px;
+  height: 28px;
+
+  @include media(desktop) {
+    display: none;
+  }
+}

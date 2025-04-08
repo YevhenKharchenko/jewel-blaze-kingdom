@@ -1,0 +1,52 @@
+.context-menu {
+  display: none;
+  background-color: $_secondary_bg_color;
+  padding: 49px 60px 66px 60px;
+  border-radius: 0 0 26px 26px;
+  border-bottom: 2px solid #22003b;
+  max-width: 375px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.context-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  text-align: left;
+}
+
+.context-list-link {
+  font-family: 'Fredoka One', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: $_white_text_color;
+  transition: color 0.3s ease-in-out;
+}
+
+.is-open {
+  display: block;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.closed {
+  display: none;
+}
+
+.screen-freeze {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
