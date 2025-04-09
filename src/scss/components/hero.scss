@@ -1,43 +1,43 @@
 .hero-section {
-  background-color: #fbbb59;
-  background-image: url(../img/hero/hero-ipad-mob.png),
-    url(../img/hero/hero-bg-mob.jpg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: center bottom, center;
-  background-size: 375px 315px, cover;
-  padding-top: 60px;
+  background-image: url(../img/hero/hero-img-mob-min.png),
+    url(../img/hero/hero-bg-mob-min.png),
+    linear-gradient(92deg, #a50000 0%, #ff953b 100%);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center bottom, center, center;
+  background-size: 333px 320px, cover, cover;
+  padding-top: 76px;
 
   @include media(desktop) {
-    background-image: url(../img/hero/hero-bg-desk.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url(../img/hero/hero-bg-desk-min.png),
+      linear-gradient(92deg, #a50000 0%, #ff953b 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: cover, cover;
   }
 }
 
 .hero-background-wrapper {
-  padding-top: 26px;
-  padding-bottom: 270px;
+  padding-bottom: 273px;
 
   @include media(desktop) {
-    padding-top: 88px;
-    padding-bottom: 89px;
+    padding-top: 64px;
+    padding-bottom: 57px;
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(../img/hero/hero-ipad-desk.png);
+    background-image: url(../img/hero/hero-img-desk-min.png);
     background-repeat: no-repeat;
-    background-position: right 61px center;
-    background-size: 467px 647px;
+    background-position: right 52px center;
+    background-size: 602px 615px;
   }
 }
 
 .hero-container {
-  padding-left: 10.5px;
-  padding-right: 10.5px;
+  padding-left: 9px;
+  padding-right: 9px;
 
   @include media(desktop) {
-    padding-left: 40px;
+    padding-left: 100px;
   }
 }
 
@@ -47,47 +47,38 @@
   align-items: center;
 
   @include media(desktop) {
-    max-width: 812px;
+    max-width: 614px;
   }
 }
 
 .hero-img {
-  margin-bottom: 12px;
-
-  @include media(desktop) {
-    margin-bottom: 28px;
-  }
+  margin-bottom: 7px;
 }
 
 .hero-title {
-  font-family: 'Fredoka One', sans-serif;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 20px;
-  text-transform: uppercase;
   text-align: center;
-  color: $_main_color;
-  margin-bottom: 12px;
+  color: $_white_text_color;
+  margin-bottom: 22px;
 
   @include media(desktop) {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 22px;
+    font-size: 28px;
     max-width: fit-content;
   }
 }
 
 .hero-text {
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 16px;
   text-align: center;
-  color: $_main_color;
-  margin-bottom: 12px;
-  max-width: 350px;
+  color: $_white_text_color;
+  margin-bottom: 22px;
+  max-width: 340px;
 
   @include media(desktop) {
     font-size: 18px;
-    margin-bottom: 24px;
+    margin-bottom: 42px;
     max-width: fit-content;
   }
 }
@@ -107,7 +98,4 @@
       transform: scale(1.1);
     }
   }
-}
-
-.hero-btn-img {
 }

@@ -1,10 +1,10 @@
 .policy-section {
   background-color: $_white_text_color;
-  padding-top: 80px;
+  padding-top: 140px;
   padding-bottom: 40px;
 
   @include media(desktop) {
-    padding-top: 60px;
+    padding-top: 120px;
   }
 }
 
