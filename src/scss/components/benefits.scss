@@ -1,41 +1,51 @@
 .benefits-section {
   background-color: $_main_bg_color;
-  padding-top: 28px;
-  padding-bottom: 45px;
+  padding-top: 18px;
+  padding-bottom: 88px;
   scroll-margin-top: 50px;
+
+  @include media(desktop) {
+    padding-top: 14px;
+    padding-bottom: 48px;
+  }
 }
 
 .benefits-section-wrapper {
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+
   @include media(desktop) {
-    max-width: 100vw;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
+    max-width: 1440px;
   }
+}
+
+.benefits-container {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .benefits-title {
   margin-bottom: 40px;
 
   @include media(desktop) {
-    margin-bottom: 63px;
+    margin-bottom: 25px;
   }
+}
+
+.benefits-title-img {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .benefits-swiper-container {
   position: relative;
-  overflow: hidden;
-  max-width: 335px;
-  border-radius: 22px;
+  max-width: 284px;
+  border-radius: 6px;
   margin-left: auto;
   margin-right: auto;
   visibility: hidden;
-
-  @include media(desktop) {
-    max-width: 540px;
-    height: 116px;
-    overflow: visible;
-  }
 }
 
 .benefits-swiper-container.show {
@@ -43,24 +53,22 @@
 }
 
 .benefits-slide {
+  border: 4px solid #a50000;
+  border-radius: 6px;
+  padding: 12px;
+  max-width: 284px;
+  height: 206px !important;
   display: flex;
   background-color: #fff;
   justify-content: center;
   align-items: center;
-  border-radius: 22px;
-  border: 1px solid #fff;
-  box-shadow: 0 2px 18px 0 rgba(255, 255, 255, 0.35);
-  padding: 18px 18px;
-
-  @include media(desktop) {
-    padding: 18px 45px;
-  }
 }
 
 .benefits-slide-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
 }
 
 .benefits-circle-wrapper {
@@ -69,67 +77,14 @@
 }
 
 .benefits-subtitle {
-  font-family: 'Fredoka One', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
-  text-transform: uppercase;
   text-align: center;
-  color: $_main_color;
-  margin-bottom: 10px;
-
-  @include media(desktop) {
-    font-size: 18px;
-    text-align: left;
-  }
+  margin-bottom: 8px;
 }
 
 .benefits-text {
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 14px;
   text-align: center;
-  color: $_main_color;
-
-  @include media(desktop) {
-    font-size: 16px;
-    text-align: left;
-  }
-}
-
-.benefits-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 32px;
-  gap: 22px;
-
-  @include media(desktop) {
-    margin-top: 42px;
-  }
-}
-
-.arrow-btn {
-  transition: transform 0.3s ease-in-out;
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  &:active {
-    transform: scale(0.9);
-  }
-
-  @include media(desktop) {
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  &[disabled] {
-    opacity: 0.5;
-    cursor: not-allowed;
-
-    &:hover {
-      transform: none;
-    }
-  }
 }

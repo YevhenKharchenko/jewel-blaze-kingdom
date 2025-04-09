@@ -40,14 +40,14 @@
 
   &:hover,
   &:focus {
-    color: $_main_bg_color;
+    color: $_white_text_color;
   }
 }
 
 .link-home {
   border-radius: 100px;
   padding: 12px 16px;
-  background: #900909;
+  background-color: #900909;
   color: #fff9ff;
 }
 

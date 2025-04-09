@@ -1,0 +1,94 @@
+.play-section {
+  padding-top: 18px;
+  padding-bottom: 35px;
+  background-image: url(../img/hero/hero-bg-mob-min.png),
+    linear-gradient(360deg, #d24b1e 0%, #ff953b 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+  scroll-margin-top: 50px;
+
+  @include media(desktop) {
+    padding-top: 14px;
+    padding-bottom: 76px;
+  }
+}
+
+.play-container {
+  @include media(desktop) {
+    padding-left: 69px;
+    padding-right: 69px;
+  }
+}
+
+.play-title {
+  margin-bottom: 40px;
+
+  @include media(desktop) {
+    margin-bottom: 43px;
+  }
+}
+
+.play-title-img {
+  margin: 0 auto;
+}
+
+.play-secondary-title {
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 22px;
+
+  @include media(desktop) {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+}
+
+.play-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  @include media(desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 61px;
+  }
+}
+
+.play-list-item {
+  @include media(desktop) {
+    width: 620px;
+  }
+}
+
+.play-img {
+  margin-bottom: 12px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(desktop) {
+    margin-bottom: 16px;
+  }
+}
+
+.play-subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #080d03;
+  margin-bottom: 12px;
+}
+
+.play-text {
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  color: #080d03;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}

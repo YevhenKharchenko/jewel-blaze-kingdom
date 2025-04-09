@@ -1,10 +1,11 @@
 .about-section {
-  padding-top: 28px;
-  padding-bottom: 28px;
+  padding-top: 18px;
+  padding-bottom: 33px;
   scroll-margin-top: 50px;
+  background: linear-gradient(180deg, #d24b1e 0%, #ff953b 100%);
 
   @include media(desktop) {
-    padding-bottom: 49px;
+    padding-top: 14px;
   }
 }
 
@@ -17,61 +18,84 @@
 
 .about-title {
   margin-bottom: 40px;
+
+  @include media(desktop) {
+    margin-bottom: 23px;
+  }
+}
+
+.about-title-img {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-content-wrapper {
   @include media(desktop) {
     display: flex;
-    gap: 40px;
+    flex-direction: column-reverse;
+    gap: 31px;
   }
 }
 
-.about-img {
-  margin-bottom: 40px;
+.about-primary-wrapper {
+  @include media(desktop) {
+    display: flex;
+    gap: 57px;
+    justify-content: center;
+    align-items: start;
+  }
+}
+
+.about-text-wrapper {
+  @include media(desktop) {
+    max-width: 630px;
+  }
+}
+
+.about-subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 22px;
+
+  @include media(desktop) {
+    font-size: 22px;
+    text-align: center;
+    max-width: 886px;
+    margin: 0 auto;
+  }
+}
+
+.about-secondary-subtitle {
+  margin-bottom: 18px;
+}
+
+.about-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin-bottom: 22px;
+}
+
+.about-list {
+  list-style: disc;
+  margin-bottom: 22px;
+  padding-left: 24px;
 
   @include media(desktop) {
     margin-bottom: 0;
   }
 }
 
-.about-text-wrapper {
-  @include media(desktop) {
-    max-width: 654px;
-    line-height: 1.5;
-  }
-}
-
-.about-subtitle {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-
-  &:not(:last-child) {
-    margin-bottom: 14px;
-  }
-}
-
-.about-text {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  margin-bottom: 14px;
-}
-
-.about-list {
-  list-style: disc;
-  margin-bottom: 14px;
-  padding-left: 24px;
-}
-
 .about-list-item {
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
 }
 
 .about-list-item-text {
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
 }
