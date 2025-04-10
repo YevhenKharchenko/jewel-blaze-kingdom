@@ -24,23 +24,5 @@ const gallerySwiper = new Swiper('.gallery-swiper-container', {
     init: () => {
       document.querySelector('.gallery-swiper-container').classList.add('show');
     },
-    slideChange: () => {
-      updateGalleryArrows();
-    },
   },
-});
-
-function updateGalleryArrows() {
-  galleryLeftArrow.disabled = gallerySwiper.isBeginning;
-  galleryRightArrow.disabled = gallerySwiper.isEnd;
-}
-
-updateGalleryArrows();
-
-galleryLeftArrow.addEventListener('click', () => {
-  gallerySwiper.slidePrev();
-});
-
-galleryRightArrow.addEventListener('click', () => {
-  gallerySwiper.slideNext();
 });
