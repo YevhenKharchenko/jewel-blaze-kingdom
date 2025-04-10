@@ -10,15 +10,15 @@ const reviewsSwiper = new Swiper('.reviews-swiper-container', {
   grabCursor: true,
   slidesPerView: 1,
   initialSlide: 0,
-  spaceBetween: 12,
+  spaceBetween: 40,
   grabCursor: true,
   allowTouchMove: true,
   speed: 500,
-  breakpoints: {
-    1440: {
-      spaceBetween: 22,
-    },
-  },
+  // breakpoints: {
+  //   1440: {
+  //     spaceBetween: 22,
+  //   },
+  // },
   on: {
     init: () => {
       document.querySelector('.reviews-swiper-container').classList.add('show');

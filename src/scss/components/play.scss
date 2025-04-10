@@ -9,6 +9,8 @@
   scroll-margin-top: 50px;
 
   @include media(desktop) {
+    background-image: url(../img/hero/hero-bg-desk-min.png),
+      linear-gradient(360deg, #d24b1e 0%, #ff953b 100%);
     padding-top: 14px;
     padding-bottom: 76px;
   }
