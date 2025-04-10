@@ -1,22 +1,13 @@
 .reviews-section {
   padding-top: 18px;
   padding-bottom: 55px;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 70px;
 
   @include media(desktop) {
     padding-top: 14px;
     padding-bottom: 106px;
   }
 }
-
-// .reviews-section::before {
-//   content: '';
-//   position: absolute;
-//   inset: 0;
-//   background-color: #ffd797;
-//   opacity: 0.4;
-//   pointer-events: none;
-// }
 
 .reviews-section-wrapper {
   max-width: 375px;
@@ -94,6 +85,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 5.75px;
   margin-bottom: 20px;
 }
 

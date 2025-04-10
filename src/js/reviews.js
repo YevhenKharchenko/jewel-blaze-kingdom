@@ -1,5 +1,8 @@
 import Swiper from 'swiper';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css/bundle';
+
+Swiper.use([Autoplay]);
 
 const revLeftArrow = document.getElementById('revLeftArrow');
 const revRightArrow = document.getElementById('revRightArrow');
@@ -13,12 +16,12 @@ const reviewsSwiper = new Swiper('.reviews-swiper-container', {
   spaceBetween: 40,
   grabCursor: true,
   allowTouchMove: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
   speed: 500,
-  // breakpoints: {
-  //   1440: {
-  //     spaceBetween: 22,
-  //   },
-  // },
   on: {
     init: () => {
       document.querySelector('.reviews-swiper-container').classList.add('show');

@@ -11,8 +11,8 @@ function onBtnClick(e) {
     if (item !== faqContainer) {
       item.classList.remove('faq-open');
       item.querySelector('.faq-bottom-text').classList.remove('is-visible');
-      item.querySelector('use').setAttribute('href', `${sprite}#icon-cross`);
-      // item.querySelector('.faq-icon').classList.add('faq-icon-minus');
+      item.querySelector('use').setAttribute('href', `${sprite}#icon-close`);
+      item.querySelector('.faq-icon').classList.remove('faq-icon-minus');
     }
   });
 
@@ -24,10 +24,12 @@ function onBtnClick(e) {
     faqContainer
       .querySelector('use')
       .setAttribute('href', `${sprite}#icon-remove`);
+    faqContainer.querySelector('.faq-icon').classList.add('faq-icon-minus');
   } else {
     faqContainer.classList.remove('faq-open');
     faqContainer
       .querySelector('use')
-      .setAttribute('href', `${sprite}#icon-cross`);
+      .setAttribute('href', `${sprite}#icon-close`);
+    faqContainer.querySelector('.faq-icon').classList.remove('faq-icon-minus');
   }
 }

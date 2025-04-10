@@ -17,7 +17,6 @@ const benefitsSwiper = new Swiper('.benefits-swiper-container', {
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
-    pauseOnMouseEnter: true,
   },
   on: {
     init: () => {

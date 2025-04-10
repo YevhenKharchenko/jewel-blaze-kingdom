@@ -1,7 +1,8 @@
 .cookie-banner-section {
-  background-color: $_white_text_color;
-  width: 335px;
-  border: 1px solid #8b5ce2;
+  background-color: #fff;
+  width: 100%;
+  max-width: 335px;
+  border: 1px solid #900909;
   box-shadow: 0 14px 42px 0 rgba(8, 15, 52, 0.06);
   border-radius: 20px;
   position: fixed;
@@ -12,9 +13,9 @@
   display: none;
 
   @include media(desktop) {
-    width: 1272px;
-    padding: 52px 109px 52px 138px;
-    gap: 67px;
+    max-width: 1272px;
+    padding: 52px 117px 52px 138px;
+    justify-content: space-between;
   }
 }
 
@@ -36,17 +37,17 @@
 }
 
 .cookie-close-icon {
-  stroke: $_main_color;
+  stroke: #180f29;
   width: 14px;
   height: 14px;
 }
 
 .cookie-banner-text {
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.875;
-  padding: 47px 37px 18px 37px;
+  color: #180f29;
+  padding: 47px 42px 37px 37px;
 
   @include media(desktop) {
     font-size: 18px;
@@ -57,11 +58,9 @@
 }
 
 .cookie-banner-buttons {
-  border-top: 1px solid #d5c7ff;
-  padding: 19px 11.5px 20px 11.5px;
+  padding: 0 20px 20px 15px;
   display: flex;
-  justify-content: center;
-  gap: 18px;
+  justify-content: space-between;
 
   @include media(desktop) {
     border-top: none;
@@ -73,34 +72,25 @@
 
 .cookie-accept-btn {
   border-radius: 56px;
-  padding: 18px 26px;
+  padding: 18px 24px;
   box-shadow: 0 3px 12px 0 rgba(74, 58, 255, 0.18);
-  background: #8b5ce2;
-  font-family: 'Poppins', sans-serif;
+  background: #900909;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.125;
   color: $_white_text_color;
-  outline: none;
-  border: none;
-
-  @include media(desktop) {
-    padding: 18px 24px;
-  }
 }
 
 .cookie-decline-btn {
-  border: 1px solid #d5c7ff;
+  border: 1px solid #ff953b;
   border-radius: 56px;
   padding: 18px 26px;
   box-shadow: 0 4px 8px 0 rgba(74, 58, 255, 0.08);
   background: transparent;
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.125;
-  color: $_main_color;
-  outline: none;
+  color: #180f29;
 }
 
 .show-cookie-banner {

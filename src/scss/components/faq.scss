@@ -1,18 +1,19 @@
 .faq-section {
   padding-top: 18px;
   padding-bottom: 32px;
-  background-image: url(../img/faq/faq-bg-mob-min.png);
+  background-image: url(../img/faq/faq-bg-mob-min.png),
+    linear-gradient(360deg, #ba0000 0%, #ff953b 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // filter: blur(8px);
-  // opacity: 0.45;
+  scroll-margin-top: 70px;
+  position: relative;
 
   @include media(desktop) {
-    background-image: url(../img/faq/faq-bg-desk-min.png);
+    background-image: url(../img/faq/faq-bg-desk-min.png),
+      linear-gradient(360deg, #ba0000 0%, #ff953b 100%);
     padding-top: 14px;
     padding-bottom: 59px;
-    scroll-margin-top: 50px;
   }
 }
 
@@ -69,14 +70,11 @@
 .faq-icon {
   stroke: #000;
   transform: rotate(45deg);
-
-  @include media(desktop) {
-  }
 }
 
 .faq-icon-minus {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
 }
 
 .faq-bottom-text {
@@ -91,9 +89,6 @@
   @include media(desktop) {
     max-width: 100%;
   }
-}
-
-.faq-open {
 }
 
 .is-visible {
