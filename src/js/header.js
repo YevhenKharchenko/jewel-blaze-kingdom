@@ -63,7 +63,7 @@ function onNavigationLinkClick(e) {
 
   if (
     location.href.includes('privacy-policy') ||
-    location.href.includes('terms-of-use') ||
+    location.href.includes('terms-and-conditions') ||
     location.href.includes('cookies-policy')
   ) {
     location.href = './index.html#' + targetID;
