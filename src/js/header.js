@@ -45,3 +45,37 @@ function onOutsideMenuClick(e) {
     onCloseContextButtonClick();
   }
 }
+
+const navLinks = document.querySelectorAll('.nav-list-link');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', onNavigationLinkClick);
+});
+
+function onNavigationLinkClick(e) {
+  e.preventDefault();
+
+  navLinks.forEach(link => link.classList.remove('active'));
+
+  e.target.classList.add('active');
+
+  const targetID = e.target.getAttribute('href').substring(1);
+
+  if (
+    location.href.includes('privacy-policy') ||
+    location.href.includes('terms-of-use') ||
+    location.href.includes('cookies-policy')
+  ) {
+    location.href = './index.html#' + targetID;
+    return;
+  }
+
+  scrollToElement(targetID);
+}
+
+function scrollToElement(elementId) {
+  const targetElement = document.getElementById(elementId);
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  }
+}

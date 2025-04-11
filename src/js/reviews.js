@@ -7,7 +7,9 @@ Swiper.use([Autoplay]);
 const revLeftArrow = document.getElementById('revLeftArrow');
 const revRightArrow = document.getElementById('revRightArrow');
 
-const reviewsSwiper = new Swiper('.reviews-swiper-container', {
+let reviewsSwiper;
+
+reviewsSwiper = new Swiper('.reviews-swiper-container', {
   direction: 'horizontal',
   loop: false,
   grabCursor: true,
@@ -17,6 +19,11 @@ const reviewsSwiper = new Swiper('.reviews-swiper-container', {
   grabCursor: true,
   allowTouchMove: true,
   speed: 500,
+  breakpoints: {
+    1440: {
+      initialSlide: 1,
+    },
+  },
   on: {
     init: () => {
       document.querySelector('.reviews-swiper-container').classList.add('show');
@@ -27,12 +34,14 @@ const reviewsSwiper = new Swiper('.reviews-swiper-container', {
   },
 });
 
-function updateRevArrows() {
-  revLeftArrow.disabled = reviewsSwiper.isBeginning;
-  revRightArrow.disabled = reviewsSwiper.isEnd;
-}
-
 updateRevArrows();
+
+function updateRevArrows() {
+  if (reviewsSwiper) {
+    revLeftArrow.disabled = reviewsSwiper.isBeginning;
+    revRightArrow.disabled = reviewsSwiper.isEnd;
+  }
+}
 
 revLeftArrow.addEventListener('click', () => {
   reviewsSwiper.slidePrev();

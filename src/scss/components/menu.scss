@@ -28,13 +28,13 @@
   font-size: 18px;
   color: #180f29;
   transition: color 0.3s ease-in-out;
-}
 
-.context-link-home {
-  border-radius: 100px;
-  padding: 12px 16px;
-  color: #fff9ff;
-  background-color: #900909;
+  &:active {
+    color: #fff9ff;
+    border-radius: 100px;
+    padding: 12px 16px;
+    background-color: #900909;
+  }
 }
 
 .is-open {

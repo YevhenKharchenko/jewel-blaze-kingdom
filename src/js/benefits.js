@@ -21,6 +21,11 @@ const benefitsSwiper = new Swiper('.benefits-swiper-container', {
     delay: 2500,
     disableOnInteraction: false,
   },
+  breakpoints: {
+    1440: {
+      initialSlide: 2,
+    },
+  },
   on: {
     init: () => {
       document
