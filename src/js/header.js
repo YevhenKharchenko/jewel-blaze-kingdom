@@ -47,6 +47,33 @@ function onOutsideMenuClick(e) {
 }
 
 const navLinks = document.querySelectorAll('.nav-list-link');
+const sectionIds = Array.from(navLinks).map(link =>
+  link.getAttribute('href').replace('#', '')
+);
+
+const sections = sectionIds
+  .map(id => document.getElementById(id))
+  .filter(Boolean);
+
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5,
+};
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const id = entry.target.id;
+    const navLink = document.querySelector(`.nav-list-link[href="#${id}"]`);
+
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      navLink?.classList.add('active');
+    }
+  });
+}, observerOptions);
+
+sections.forEach(section => observer.observe(section));
 
 navLinks.forEach(link => {
   link.addEventListener('click', onNavigationLinkClick);
