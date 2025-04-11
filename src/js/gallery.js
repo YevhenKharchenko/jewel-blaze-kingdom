@@ -1,8 +1,11 @@
 import Swiper from 'swiper';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css/bundle';
+import { observeSwiperAutoplay } from './observer.js';
 
 Swiper.use([Autoplay]);
+
+const gallerySwiperEl = document.querySelector('.gallery-swiper-container');
 
 const gallerySwiper = new Swiper('.gallery-swiper-container', {
   direction: 'horizontal',
@@ -29,3 +32,5 @@ const gallerySwiper = new Swiper('.gallery-swiper-container', {
     },
   },
 });
+
+observeSwiperAutoplay(gallerySwiper, gallerySwiperEl);

@@ -4,7 +4,12 @@ const closeContextBtn = document.querySelector('.close-btn');
 
 menuBtn.addEventListener('click', onMenuButtonClick);
 
+let contextMenuIsOpen = false;
+
 function onMenuButtonClick() {
+  if (contextMenuIsOpen) return;
+
+  contextMenuIsOpen = true;
   contextMenu.classList.add('is-open');
   menuBtn.classList.add('closed');
   closeContextBtn.classList.add('is-open');
@@ -15,6 +20,7 @@ function onMenuButtonClick() {
 }
 
 function onCloseContextButtonClick() {
+  contextMenuIsOpen = false;
   contextMenu.classList.remove('is-open');
   closeContextBtn.classList.remove('is-open');
   menuBtn.classList.remove('closed');
@@ -37,6 +43,5 @@ function onOutsideMenuClick(e) {
 
   if (!isClickInsideMenu && !isClickOnMenuBtn && !isClickOnCloseBtn) {
     onCloseContextButtonClick();
-    document.removeEventListener('click', onOutsideMenuClick);
   }
 }
