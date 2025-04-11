@@ -1,10 +1,11 @@
 .about-section {
   padding-top: 18px;
   padding-bottom: 33px;
-  scroll-margin-top: 70px;
+  scroll-margin-top: 60px;
   background: linear-gradient(180deg, #d24b1e 0%, #ff953b 100%);
 
   @include media(desktop) {
+    scroll-margin-top: 70px;
     padding-top: 14px;
   }
 }

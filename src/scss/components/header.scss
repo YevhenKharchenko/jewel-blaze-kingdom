@@ -28,19 +28,23 @@
 
   @include media(desktop) {
     display: flex;
-    gap: 88px;
+    gap: 57px;
   }
 }
 
 .nav-list-link {
   font-weight: 600;
   font-size: 18px;
+  padding: 12px 16px;
   color: #180f29;
-  transition: color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &:hover,
   &:focus {
-    color: $_white_text_color;
+    color: #fff9ff;
+    border-radius: 100px;
+    padding: 12px 16px;
+    background-color: #900909;
   }
 }
 

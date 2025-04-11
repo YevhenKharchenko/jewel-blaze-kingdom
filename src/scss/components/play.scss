@@ -6,9 +6,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  scroll-margin-top: 70px;
+  scroll-margin-top: 60px;
 
   @include media(desktop) {
+    scroll-margin-top: 70px;
     background-image: url(../img/hero/hero-bg-desk-min.png),
       linear-gradient(360deg, #d24b1e 0%, #ff953b 100%);
     padding-top: 14px;

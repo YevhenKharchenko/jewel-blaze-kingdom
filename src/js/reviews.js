@@ -16,11 +16,6 @@ const reviewsSwiper = new Swiper('.reviews-swiper-container', {
   spaceBetween: 40,
   grabCursor: true,
   allowTouchMove: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
   speed: 500,
   on: {
     init: () => {

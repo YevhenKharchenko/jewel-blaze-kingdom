@@ -6,7 +6,7 @@ Swiper.use([Autoplay]);
 
 const benefitsSwiper = new Swiper('.benefits-swiper-container', {
   direction: 'horizontal',
-  loop: true,
+  loop: false,
   grabCursor: true,
   slidesPerView: 1,
   initialSlide: 3,

@@ -1,8 +1,8 @@
 import Swiper from 'swiper';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css/bundle';
 
-const galleryLeftArrow = document.getElementById('galleryLeftArrow');
-const galleryRightArrow = document.getElementById('galleryRightArrow');
+Swiper.use([Autoplay]);
 
 const gallerySwiper = new Swiper('.gallery-swiper-container', {
   direction: 'horizontal',
@@ -14,10 +14,13 @@ const gallerySwiper = new Swiper('.gallery-swiper-container', {
   grabCursor: true,
   allowTouchMove: true,
   speed: 500,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     1440: {
       spaceBetween: 32,
-      initialSlide: 2,
     },
   },
   on: {

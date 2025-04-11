@@ -6,10 +6,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  scroll-margin-top: 70px;
   position: relative;
+  scroll-margin-top: 60px;
 
   @include media(desktop) {
+    scroll-margin-top: 70px;
     background-image: url(../img/faq/faq-bg-desk-min.png),
       linear-gradient(360deg, #ba0000 0%, #ff953b 100%);
     padding-top: 14px;
@@ -61,10 +62,6 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-
-  @include media(desktop) {
-    // padding-bottom: 6px;
-  }
 }
 
 .faq-icon {
